@@ -1,0 +1,18 @@
+dir
+cd Desktop
+dir
+cd DojoAssignments
+dir
+git init
+git status
+git add -A
+git commit -m "added all beginning files"
+git status
+git remote add origin https:...
+git push -u origin master
+dir
+copy NUL readme.md
+git status
+git add readme.md
+git commit -m "Created readme"
+git push origin master
