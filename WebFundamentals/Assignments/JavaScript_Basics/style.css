@@ -1,20 +1,20 @@
 #wrapper{
     width: 970px;
-    background-color: #1B3062;
+    background-color: #1c345e;
     margin: 0px auto;
     padding: 10px;
 }
 
 #header{
     width: 970px;
-    background-color: #D91E1E;
+    background-color: #ce3036;
     border-radius: 10px;
     padding: 1px;
     margin-bottom: 10px;
     font-size: 15px;
 }
 h1 {
-    color: lightgray;
+    color: #c2d3eb;
     margin-left: 10px;
 }
 
@@ -22,53 +22,53 @@ h1 {
     display: inline-block;
     vertical-align: top;
     width: 175px;
-    background-color: #007399;
+    background-color: #2a7d8c;
     border-radius: 10px;
-    color: aqua;
+    color: #59ccdc;
     font-size: 14px;
 }
 
 #navigation a{
-    color: aqua;
+    color: #59ccdc;
 }
 
 #main-content {
     display: inline-block;
     width: 781px;
-    background-color: black;
+    background-color: #0e1822;
     border-radius: 10px;
     margin-left: 10px;
     font-size: 14px;
 }
 
 #header2 {
-    color: lightgray;
+    color: #c2d6ec;
     padding-left: 5px;
 }
 
 #description {
-    color: lightgray;
+    color: #c2d6ec;
     padding-left: 5px;
 }
 
 #list {
-    color: lightgray;
+    color: #c2d6ec;
 }
 
 .function {
-    color: #4d0099;
+    color: #626abb;
 }
 
 .link {
-    color: aqua;
+    color: a#59ccdc;
 }
 
 #footer {
     width: 970px;
-    background-color: gray;
+    background-color: #5e6673;
     border-radius: 10px;
     padding: 1px;
-    color: lightgray;
+    color: #c2d6ec;
     margin-top: 10px;
     font-size: 14px;
 }
