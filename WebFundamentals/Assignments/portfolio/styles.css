@@ -1,0 +1,53 @@
+#wrapper {
+    width: 1000px;
+    background-color: #f6f6f6
+}
+
+#header {
+    background-color: #f6f6f6;
+}
+
+h1 {
+    text-align: left;
+}
+h2 {
+    text-align: right;
+}
+
+#maincontent {
+    width: 970px;
+    background-color: #624d57;
+    padding: 15px;
+}
+
+#top {
+    width: 1000px;
+    height: 305px;
+}
+
+#imagejaynedoe {
+    width:450px;
+    height: 300px;
+}
+
+#jaynedoedoe {
+    display: inline-block;
+    width: 450px;
+    height: 300px;
+}
+
+#about {
+    background-color: #ede5ec;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    width: 500px;
+    height: 300px;
+}
+
+#about h3{
+    color: white;
+    background-color: #94939d;
+    margin-top: 0px;
+    padding-bottom: 20px;
+}
