@@ -23,15 +23,10 @@ h2 {
 #top {
     width: 1000px;
     height: 305px;
-}
-
-#imagejaynedoe {
-    width:450px;
-    height: 300px;
+    margin-bottom: 15 px;
 }
 
 #jaynedoedoe {
-    display: inline-block;
     width: 450px;
     height: 300px;
 }
@@ -50,4 +45,65 @@ h2 {
     background-color: #94939d;
     margin-top: 0px;
     padding-bottom: 20px;
+}
+
+#leftcontent {
+    width: 300px;
+    height: 400px;
+    background-color: #f0eaef;
+}
+
+#middlecontent {
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    background-color: #f0eaef;
+}
+
+#rightcontent {
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    background-color: #f0eaef;
+}
+
+.bottomimages {
+    width: 300px;
+    height: 100px;
+}
+
+#leftlinks {
+    width: 300px;
+    height: 250px;
+    background-color: #f0eaef;
+}
+
+#middlelinks {
+    width: 300px;
+    height: 250px;
+    background-color: #f0eaef;
+}
+
+#rightlinks {
+    width: 300px;
+    height: 250px;
+    background-color: #f0eaef;
+}
+
+.techheader {
+    color: white;
+    background-color: #94939d;
+    margin-top: 0px;
+    padding-bottom: 20px;
+}
+
+.bottomheaders {
+    color: white;
+    background-color: #94939d;
+    margin-top: 0px;
+}
+.technologies {
+    width: 50px;
+    height: 50px;
+    background-color: #f0eaef;
 }
