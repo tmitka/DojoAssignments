@@ -1,0 +1,52 @@
+#wrapper {
+    width: 970px;
+}
+
+#maincontent {
+    background-color: #245176;
+    width: 970px;
+}
+
+img {
+    display: inline-block;
+    width: 400px;
+    height: 100px;
+    padding: 10px;
+}
+
+#usersearch {
+    vertical-align: top;
+}
+
+#textsize {
+    color: white;
+    display: inline-block;
+    margin-left: 795px;
+}
+
+
+
+#textsize a {
+    vertical-align: top;
+    color: yellow;
+}
+
+#navigationbar {
+    width: 970px;
+    display: inline-block;
+    list-style-type: none;
+    background-color: #457dac;
+    color: white;
+}
+
+#navigationbar li {
+    
+    display: inline;
+    color: white;
+}
+
+#navigationbar a:link {
+    
+    align: center;
+    color: white;
+}
