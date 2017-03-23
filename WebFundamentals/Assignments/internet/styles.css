@@ -1,0 +1,150 @@
+#wrapper {
+    width: 970px;
+}
+
+#title img{
+    width: 90px;
+    height: 90px;
+    padding-top: 15px;
+    position: absolute;    
+}
+#side-bar {
+    display: inline-block;
+    width: 150px;
+    height: 500px;
+}
+
+#main-content {
+    display: inline-block;
+    width: 700px;
+    vertical-align: top;
+    margin-left: 5px;
+}
+#side-bar-bottom img{
+    width: 90px;
+    height: 100px;
+}
+
+#left-section img{
+    height: 20px;
+    width: 20px;
+}
+
+#left-section {
+    display: inline-block;
+    height: 20px;
+    text-align: left;
+}
+#right-section p{
+    font-size: 10px;
+    color: #8f8f8f;
+    margin:0px;
+    padding: 0px;
+}
+#right-selection img{
+    position:
+}
+#right-section h4{
+    margin:0px;
+    display: inline-block;
+}
+
+#right-section img{
+    height: 50px;
+    width: 50px;
+}
+
+#right-section {
+    text-align: right;
+}
+
+
+#right-section {
+    color: #0fc1df;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+
+#main-body img{
+    width: 300px;
+    height: 90px;
+}
+
+#main-content-header {
+    height: 100px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #b4b4b4;
+}
+
+#main-content-header p {
+    vertical-align: top;
+}
+
+#main-footer img{
+    width: 150px;
+    height: 150px;
+}
+
+h1{
+    padding-left: 90px;
+    padding-top: 30px;
+}
+
+h2 {
+    padding: 10px;
+    color: white;
+    background-color: #467ba8;
+}
+
+h3 {
+    color: #22659e;
+    font-weight: bold;
+}
+
+#side-bar {
+    font-weight: bold;
+}
+
+#internet {
+    color: red;
+}
+
+.keywords {
+    color: #1ea3b7;
+}
+
+#watch {
+    color: white;
+    background-color: #4681b2  
+}
+
+#resources {
+    color: white;
+    background-color: #ef7c00
+}
+
+#learn {
+    color: white;
+    background-color: #35c8df
+}
+
+#main-footer img {
+    display: inline-block;
+    text-align: left;
+}
+
+#side-bar-bottom {
+    background-image: url("images/ad_background.png");
+}
+
+.ad-text {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+#side-bar-bottom img {
+    text-align: center;
+}

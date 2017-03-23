@@ -18,16 +18,16 @@
         <h2>The World Wide Web</h2>
         <div id="side-bar">
             <div id="side-bar-top">
-                <p>So, what's an <span>Internet?</span></p>
+                <p>So, what's an <span id="internet">Internet?</span></p>
                 <p>An <a href="#">Inter</a>connected <a href="#">Net</a>work of computer all around the world!</p>
-                <button type="button" name="watch">WATCH A VIDEO</button>
+                <button id="watch" type="button" name="watch">WATCH A VIDEO</button>
                 <br>
-                <button type="button" name="resources">MORE RESOURCES</button>
+                <button id="resources" type="button" name="resources">MORE RESOURCES</button>
             </div>
             <div id="side-bar-bottom">
-                <p>Reinvent your career in just 14 weeks</p>
+                <p class="ad-text">Reinvent your career in just 14 weeks</p>
                 <img src="images/ninja.png" alt="ninja logo">
-                <button type="button" name="learn">Learn More >>></button>
+                <button id="learn" type="button" name="learn">Learn More >>></button>
             </div>
         </div>
         <div id="main-content">
@@ -37,15 +37,15 @@
                     <a href="#">DNS</a>
                 </div>
                 <div id="right-section">
+                    <p>Mon - Fri 9 a.m. - 5 p.m. (EST)</p>
                     <img src="images/phone.png" alt="phone">
-                    <p class="details">Mon - Fri 9 a.m. - 5 p.m. (EST)</p>
-                    <p>855.967.3787</p>
-                    <p class="details">International +1.617.963.0555</p>
+                    <h4>855.967.3787</h4>
+                    <p>International +1.617.963.0555</p>
                 </div>
             </div>
             <div id="main-body">
                 <h3>Clients and Servers</h3>
-                <p>Computers connected to the <span class="keywords">Web</span> are called <span class="bold">clients</span>                    and <span class="bold">servers.</span>
+                <p>Computers connected to the <span class="keywords">Web</span> are called <b>clients</b> and <b>servers.</b></p>
                     <ul>
                         <li><span class="keywords">Clients</span> are the typical Web user's Internet-connected devices (for
                             example, your computer connected to your Wi-Fi, or your phone connected to your movile network)
@@ -56,8 +56,9 @@
                             wants to access a displayed in the user's web browser.</li>
                     </ul>
                     <img src="images/client_server.jpg" alt="client server">
+                    <h3>So What Actually Happens?</h3>
                     <ol>
-                        <li>The browswer goes to the<span class="keywords">DNS server</span> and finds the real address of the
+                        <li>The browswer goes to the <span class="keywords">DNS server</span> and finds the real address of the
                             <span class="keywords">server</span> that the website lives on.</li>
                         <li>The browswer sends an <span class="keywords">HTTP request</span> message to the server asking it
                             to send a copy of the website to the client.</li>
@@ -67,8 +68,9 @@
                         <li>The browser assembles the small chunks into a complete website and displays it to you!</li>
                     </ol>
             </div>
+
             <div id="main-footer">
-                <img src="images/html" alt="html">
+                <img src="images/html.png" alt="html">
                 <h3>The Big 3 - HTML, CSS, JavaScript</h3>
                 <p>While the server can process information in many different languages, the files that they serve to the client
                     are <i>always</i> going to be some combination of HTML, CSS, and JavaScript!</p>
