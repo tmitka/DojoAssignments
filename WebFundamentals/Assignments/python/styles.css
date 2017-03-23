@@ -5,26 +5,41 @@
 #maincontent {
     background-color: #245176;
     width: 970px;
+    margin-bottom: 20px;
 }
 
 img {
-    display: inline-block;
     width: 400px;
     height: 100px;
     padding: 10px;
 }
 
+button {
+    background-color: #245176;
+    color:white;
+}
+
 #usersearch {
-    vertical-align: top;
-}
-
-#textsize {
-    color: white;
     display: inline-block;
-    margin-left: 795px;
+    vertical-align: top;
+    padding-left: 293px;
 }
 
+#usersearch p {
+    color: white;
+}
 
+#mainheader a {
+    color: yellow;
+}
+
+#searchbar {
+    display: inline-block;
+    vertical-align: top;
+    border-style: solid;
+    border-width: 20px;
+    border-color: #444444;
+}
 
 #textsize a {
     vertical-align: top;
@@ -32,7 +47,10 @@ img {
 }
 
 #navigationbar {
-    width: 970px;
+    width: 800px;
+    text-align: center;
+    margin-left: 100px;
+    border-radius: 5px;
     display: inline-block;
     list-style-type: none;
     background-color: #457dac;
@@ -40,13 +58,104 @@ img {
 }
 
 #navigationbar li {
-    
+    padding: 10px;
     display: inline;
     color: white;
 }
 
 #navigationbar a:link {
-    
     align: center;
     color: white;
 }
+
+#pythonlinks a:link {
+    color: white;
+}
+
+#pythonlinks li {
+    text-align: center;
+    padding: 5px;
+}
+
+#pythonlinks ul{
+    list-style-type: none;
+}
+
+#pythonlinks {
+    display: inline-block;
+}
+
+#pythonlinks span {
+    display: inline-block;
+    color:#d4ba3d;
+    font-size: 10px;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+#maintext {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 290px;
+    padding-bottom: 30px;
+    width: 395px;
+}
+
+#maintext p {
+    vertical-align: top;
+    color: white;
+}
+
+#maintext ul {
+    color: yellow;
+    list-style-type:none;
+    font-style: italic;
+}
+
+#information {
+    background-color: white;
+}
+
+#gettingstarted {
+    display: inline-block;
+    border-top-color: #73a7d5;
+    border-top-width: 5px;
+    border-top-style: solid;
+    vertical-align: top;
+    text-align: center;
+    width: 400px
+}
+
+.infolist a {
+    color: #86b3da;
+}
+
+.infocontent a{
+    color: #accbe6;
+}
+
+#applications {
+    display: inline-block;
+    border-top-color: #73a7d5;
+    border-top-width: 5px;
+    border-top-style: solid;
+    vertical-align: top;
+    text-align: center;
+    width: 400px
+}
+
+#footer {
+    text-align: center;
+    background-color: #285882;
+}
+#footer p {
+    display: inline-block;
+    color: #70a3d0;
+}
+
+#footer a {
+    color: #70a3d0;
+}
+
