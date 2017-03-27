@@ -10,8 +10,8 @@ function makemoney(number){
             pennies += 1;
             
         } else {
-            pennies = (collected * 2);
-            sum = sum + pennies
+            pennies = (pennies * 2);
+            sum =  pennies / 2;
             dollars = sum / 100
             collected ++;
            
