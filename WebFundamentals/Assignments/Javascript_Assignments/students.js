@@ -9,7 +9,7 @@ var students = [
 function checkstudents(students){
     
     for (var i = 0; i < students.length; i++){
-        var namelength = (students[i].first_name.length + students[i].first_name.length -1);
+    var namelength = (students[i].first_name.length + students[i].first_name.length -1);
     console.log(students[i].first_name, students[i].last_name, namelength);
 }
 }
