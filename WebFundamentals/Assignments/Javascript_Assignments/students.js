@@ -4,11 +4,12 @@ var students = [
      {first_name : 'Mark', last_name : 'Guillen'},
      {first_name : 'KB', last_name : 'Tonel'}
 ]
+function checkstudents(students){
 
     for (var i = 0; i < students.length; i++){
     console.log(students[i].first_name, students[i].last_name);
 }
+}
 
 
-
-
+checkstudents(students);
