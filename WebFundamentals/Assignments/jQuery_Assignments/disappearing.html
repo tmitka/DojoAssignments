@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="disappearing.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("img").click(function(){
+                $(this).hide();
+            });
+            $("#restorebutton").click(function(){
+                $("img").show();
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1> jQuery - assignment 1</h1>
+        <div id="images">
+            <img src="Samurai_Jack.jpg" alt="samurai jack">
+            <img src="Samurai_Jack.jpg" alt="samurai jack">
+            <img src="Samurai_Jack.jpg" alt="samurai jack">
+            <img src="Samurai_Jack.jpg" alt="samurai jack">
+            <img src="Samurai_Jack.jpg" alt="samurai jack">
+            <img src="Samurai_Jack.jpg" alt="samurai jack">
+            <img src="Samurai_Jack.jpg" alt="samurai jack">
+            <img src="Samurai_Jack.jpg" alt="samurai jack">
+        </div>          
+        <button id="restorebutton" type="button">Restore</button>
+    </div>
+
+</body>
+
+</html>
