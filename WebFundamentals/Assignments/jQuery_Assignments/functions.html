@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        .red {
-            color: red;
-        }
-    </style>
     <link rel="stylesheet" type="text/css" href="functions.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -17,22 +13,33 @@
             $("#addclassbutton").click(function () {
                 $("#addclass p").addClass("red");
             });
+            $("#slidetogglebutton").click(function () {
+                $("#slidetoggle p").slideToggle();
+            });
+
+            $("#appendbutton").click(function () {
+                $("#append p").append("<p>What have you done</p>")
+            });
+
+            $("#hidebutton").click(function () {
+                $("#hide p").hide();
+            });
+
+            $("#showbutton").click(function () {
+                $("#hide p").show();
+            });
 
         });
-    //  $(document).ready(function(){
-      //    $("h1").click(function(){
-        //      alert("hello");
-         // })
-     // });
     </script>
 </head>
+
 <body>
     <div id="wrapper">
         <div id="content">
             <div class="section">
                 <div id="addclass">
                     <div class="button">
-                        <button id= "addclassbutton" type="button">AddClass</button>
+                        <button id="addclassbutton" type="button">AddClass</button>
                     </div>
                     <div class="rightcontent">
                         <h1>AddClass</h1>
@@ -42,9 +49,9 @@
 
             </div>
             <div class="section">
-                <div id="sidetoggle">
+                <div id="slidetoggle">
                     <div class="button">
-                        <button id ="slidetogglebutton" type="button">Slidetoggle</button>
+                        <button id="slidetogglebutton" type="button">Slidetoggle</button>
                     </div>
                     <div class="rightcontent">
                         <h1>Slidetoggle</h1>
@@ -53,13 +60,35 @@
                 </div>
             </div>
             <div class="section">
-                <div id="Append">
+                <div id="append">
                     <div class="button">
-                        <button id= "apendbutton" type="button">Append</button>
+                        <button id="appendbutton" type="button">Append</button>
                     </div>
                     <div class="rightcontent">
                         <h1>Append</h1>
                         <p>Click the button to append a new paragraph!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div id="hide">
+                    <div class="button">
+                        <button id="hidebutton" type="button">Hide</button>
+                    </div>
+                    <div class="rightcontent">
+                        <h1>Hide</h1>
+                        <p>Click the button to Hide this paragraph.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div id="show">
+                    <div class="button">
+                        <button id="showbutton" type="button">Show</button>
+                    </div>
+                    <div class="rightcontent">
+                        <h1>Show</h1>
+                        <p>Click the button to Show the above paragraph.</p>
                     </div>
                 </div>
             </div>
