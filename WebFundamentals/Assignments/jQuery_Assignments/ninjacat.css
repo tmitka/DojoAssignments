@@ -1,0 +1,9 @@
+wrapper {
+    width: 200px;
+}
+
+
+#images {
+    display: inline-block;
+    width: 190px;
+}
