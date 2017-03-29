@@ -1,0 +1,33 @@
+#wrapper {
+    width: 600px;
+}
+
+table {
+    border-style: solid;
+    border-width: 2px;
+    width: 100%;
+}
+
+form {
+    text-align: right;
+}
+
+th {
+    padding: 10px;
+}
+
+button {
+    display: inline-block;
+    margin-left: 349px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#userinfo {
+    width: 70%;
+}
+
+h1 {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
