@@ -1,0 +1,18 @@
+#wrapper {
+    width: 1000px;
+}
+
+#userinfo {
+    display: inline-block;
+    width: 48%;
+}
+
+form {
+    text-align: left;
+}
+
+#contactcards {
+    display: inline-block;
+    width: 48%;
+    text-align: right;
+}
