@@ -1,0 +1,26 @@
+#wrapper {
+    display: inline-block;
+}
+
+#pokemon {
+    display: inline-block;
+    width: 71%;
+
+}
+
+
+#pokedex {
+    display: inline-block;
+    height: 600px;
+    width: 400px;
+    border-style: solid;
+    border-color: red;
+    border-width: 5px;
+    width: 27%;
+    vertical-align: top;
+    position: fixed;
+}
+
+img {
+    display: inline-block;
+}
