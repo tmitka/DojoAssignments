@@ -1,0 +1,25 @@
+#wrapper {
+    display: inline-block;
+}
+
+img {
+    display: inline-block;
+    width: 224px;
+    height: 137px;
+}
+
+#house {
+    display: inline-block;
+}
+
+#housedetail {
+    border: 2px solid black;
+    border-radius: 6px;
+    margin-top: 10px;
+    min-height: 200px;
+}
+
+p {
+    font-weight: none;
+    font-size: 16px;
+}

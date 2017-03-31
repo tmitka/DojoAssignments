@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GoT</title>
+    <link rel="stylesheet" href="gothouses.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#stark").click(function () {
+                $.get("http://www.anapioficeandfire.com/api/houses/362", function (res) {
+                    var html_str = ""
+                    html_str += "<h2>Name: " + res.name + "<h2>"
+                    html_str += "<p>Words: " + res.words + "<p>"
+                    html_str += "<p>Words: " + res.titles + "<p>"
+                    $("#housedetail").html(html_str);
+                }, "json");
+            });
+            $("#targaryen").click(function () {
+                $.get("http://www.anapioficeandfire.com/api/houses/378", function (res) {
+                    var html_str = ""
+                    html_str += "<h2>Name: " + res.name + "<h2>"
+                    html_str += "<p>Words: " + res.words + "<p>"
+                    html_str += "<p>Words: " + res.titles + "<p>"
+                    $("#housedetail").html(html_str);
+                }, "json");
+            });
+            $("#lannister").click(function () {
+                $.get("http://www.anapioficeandfire.com/api/houses/229", function (res) {
+                    var html_str = ""
+                    html_str += "<h2>Name: " + res.name + "<h2>"
+                    html_str += "<p>Words: " + res.words + "<p>"
+                    html_str += "<p>Words: " + res.titles + "<p>"
+                    $("#housedetail").html(html_str);
+                }, "json");
+            });
+            $("#baratheon").click(function () {
+                $.get("http://www.anapioficeandfire.com/api/houses/17", function (res) {
+                    var html_str = ""
+                    html_str += "<h2>Name: " + res.name + "<h2>"
+                    html_str += "<p>Words: " + res.words + "<p>"
+                    html_str += "<p>Words: " + res.titles + "<p>"
+                    $("#housedetail").html(html_str);
+                }, "json");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="house">
+            <img id="stark" src="stark.jpg" alt="house stark logo">
+            <img id="targaryen" src="targaryen.jpg" alt="house targaryen logo">
+            <img id="lannister" src="lannister.jpg" alt="house lannister logo">
+            <img id="baratheon" src="baratheon.png" alt="house baratheon logo">
+        </div>
+        <div id="housedetail">
+        </div>
+    </div>
+    
+</body>
+</html>
