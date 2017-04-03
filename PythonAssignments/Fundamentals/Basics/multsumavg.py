@@ -10,8 +10,8 @@ for fives in range(5, 1000001):
 
 #sum list
 list = [1, 2, 5, 10, 255, 3]
-sumlist = sum(list)
-print sumlist
+print sum(list)
+
 
 #avg list
 avglist = sum(list) / len(list)
