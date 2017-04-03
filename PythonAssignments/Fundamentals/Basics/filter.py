@@ -14,21 +14,21 @@ eL = []
 spL = ['name','address','phone number','social security number']
 
 #function that takes whatever variable as x and changes answer based on that
-x = lL
-if type(x) is int:
-    if x >= 100:
-        print "That's a big number!"
-    else:
-        print "That's a small number"
-if type(x) is str:
-    if len(x) >= 50:
-        print "Long sentence"
-    else:
-        print "short sentence"
-if type(x) is list:
-    if len(x) > 10:
-        print "Big list"
-    else:
-        print "Short list"
+def filter(var):
+    if type(var) is int:
+        if var >= 100:
+            print "That's a big number!"
+        else:
+            print "That's a small number"
+    if type(var) is str:
+        if len(var) >= 50:
+            print "Long sentence"
+        else:
+            print "short sentence"
+    if type(var) is list:
+        if len(var) > 10:
+            print "Big list"
+        else:
+            print "Short list"
 
-
+filter(['name','address','phone number','social security number'])
