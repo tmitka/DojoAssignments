@@ -10,4 +10,3 @@
 #    i = i + 1
 
 def checkerboard():
-    d
