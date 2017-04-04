@@ -11,6 +11,6 @@ def cointoss(number):
             print "Attempt #", num, "Throwing a coin... It's a head! ... Got", headcount, "head(s) so far and", tailcount, "tail(s) so far"             
         else:
             tailcount = tailcount + 1
-            print "Attempt #", num, "Throwing a coin... It's a head! ... Got", headcount, "head(s) so far and", tailcount, "tail(s) so far"
+            print "Attempt #", num, "Throwing a coin... It's a tail! ... Got", headcount, "head(s) so far and", tailcount, "tail(s) so far"
             
 cointoss(5001)
