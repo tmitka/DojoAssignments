@@ -3,36 +3,22 @@ class MathDojo(object):
         self.sum = 0
 
     def add(self, *addnumber):
-        #if type(addnumber) is tuple:
-            #numberlist = list(addnumber)
-            #for number in numberlist:
-                #sumlist = []
-                #sumlist.append(number)
-                #print sumlist
-                #self.sum = self.sum + number
-            #return self
-            #for number in addnumber:
-            #    numberlist = []
-            #    numberlist.append(number)  
-            #    self.sum = self.sum + number
-            #return self
-
-       # if type(addnumber) is int:
             for number in addnumber:
-               # numberlist = []
-                #numberlist.append(number)
-                self.sum = self.sum + number
+                if type(number) is int:
+                    self.sum = self.sum + number
+                else: 
+                    self.sum = self.sum + sum(number)
             return self
 
     def subtract(self, *subnumber):
-        #if type(subnumber) is int:
             for number in subnumber:
-                #numberlist = []
-                #numberlist.append(number)
-                self.sum = self.sum - number
+                if type(number) is int:
+                    self.sum = self.sum - number
+                else:
+                    self.sum = self.sum - sum(number)
             return self
 
     def result(self):
         print self.sum
 
-MathDojo().add(2).add(2, 5, 3).subtract(3, 2).result()
+MathDojo().add([1],3,4).add([3, 5, 7, 8], [2, 4.3, 1.25]).subtract(2, [2,3], [1.1, 2.3]).result()
