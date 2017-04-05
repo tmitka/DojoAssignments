@@ -5,9 +5,11 @@ class Animal(object):
 
     def walk(self):
         self.health = self.health - 1
+        return self
 
     def run(self):
         self.health = self.health - 5
+        return self
     
     def displayHealth(self):
         print "{} has {} health".format(self.name, self.health)
@@ -28,7 +30,7 @@ class Dog(Animal):
         self.health += 5
 
 dog = Dog("sam", 900)
-dog.walk()
+dog.walk().walk()
 dog.walk()
 dog.walk()
 dog.run()
