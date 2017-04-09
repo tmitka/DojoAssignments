@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dojo Form</title>
+    <title>Dojo Form with validation</title>
 </head>
 <body>
-    <form action='/result', method='post'>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+    <form action='/process', method='post'>
         Your Name: <input type="text" name="name"><br>
         Dojo Location: <input type="text" name="location"><br>
         Favorite Language: <input type="text" name="language"><br>
         Comment (optional):<br>
         <textarea name='comment'></textarea>
         
-        <input type="submit" value='Button'>
+        <input type="submit" value='Submit'>
     </form>
 </body>
 </html>
