@@ -7,19 +7,10 @@ def index():
 
 @app.route('/ninja')
 def ninja():
-    return render_template('ninja.html')
+    return render_template('ninjas.html')
 
 @app.route('/ninja/<color>')
-def color(color):
-    if color == 'red':
-        return render_template('red.html')
-    elif color == 'blue':
-        return render_template('blue.html')
-    elif color == 'purple':
-        return render_template('purple.html')
-    elif color == 'orange':
-        return render_template('orange.html')
-    else:
-        return render_template('fail.html')
+def ninja_color(color):
+    return render_template('ninja_color.html', color=color)
 
 app.run(debug=True)

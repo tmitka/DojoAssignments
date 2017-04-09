@@ -1,0 +1,12 @@
+#wrapper {
+    width: 960px;
+    text-align: center;
+}
+
+#colorbox {
+    text-align: center;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+}
+
