@@ -15,10 +15,16 @@
             <p>Take a guess!</p>
         </div>
         <div id="colorbox">
+            {% if session['guess'] == session['winningnumber']%}
+                <h2 id="number">{{session['winningnumber']}} was correct</h2>
+            {% endif %}
+
+            <h2 id="the_guess">{{session['answer']}}</h2>
+
         </div>
         <div id="user_guess">
         </div>
-            <form action="/">
+            <form action="/guess" method='post'>
                 <input type="text" name="guess"><br>
                 <input type="submit" name="number" value="submit">
             </form>
