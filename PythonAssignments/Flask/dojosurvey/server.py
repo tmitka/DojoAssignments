@@ -8,14 +8,26 @@ def index():
 
 @app.route('/process', methods=['POST'])
 def form_submit():
-    if len(request.form['name']) < 1:
+    session['name'] = request.form['name']
+    session['location'] = request.form['location']
+    session['language'] = request.form['language']
+    session['comment'] = request.form['comment']
+
+    validation_failed = False
+
+    if len(session['name']) < 1:
         flash('Name cannot be empty')
-    else:
-        flash('Success')
-    if len(request.form['comment']) < 1:
+        validation_failed = True
+    if len(session['comment']) < 1:
         flash('please enter a comment')
-    elif len(request.form['comment']) > 120:
+        validation_failed = True    
+    if len(session['comment']) > 120:
         flash('comment cannot be longer than 120 characters')
-    return redirect('/')
+        validation_failed = True
+
+    if validation_failed == True:        
+        return redirect('/')
+    else:
+        return render_template('info.html')
 
 app.run(debug=True)
