@@ -10,8 +10,8 @@
     <div id="wrapper">
         <div id="navbar">
             <h3>Coding Dojo Wall</h3>
-            <p>Welcome User<p>
-            <a href="/">log off</a>
+            <p>Welcome {{session["first_name"]}}<p>
+            <a href="/log_off">log off</a>
         </div>
         </div id='post'>
         <form action="/the_wall", methods='POST'>
