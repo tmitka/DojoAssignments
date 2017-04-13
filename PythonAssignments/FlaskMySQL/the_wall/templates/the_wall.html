@@ -14,10 +14,12 @@
             <a href="/log_off">log off</a>
         </div>
         </div id='post'>
-        <form action="/the_wall", methods='POST'>
-        <textarea rows="4" cols="100"></textarea><br>
-        <input type="submit" name="post", value='Post Message'>
+            <form action="/message_process", method='POST'>
+            <textarea name = "message_post" rows="4" cols="100"></textarea><br>
+            <input type="submit" name="post", value='Post Message'>
         </form>
+        </div>
+        <div id='message_board'>
         </div>
     </div>
     </div>

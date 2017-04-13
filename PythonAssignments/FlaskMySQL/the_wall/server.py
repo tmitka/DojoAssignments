@@ -13,19 +13,22 @@ def the_wall():
 
 @app.route('/login', methods=["POST"])
 def login():
-    query = "SELECT email from users where email= :email"
-    data = {
+    email = request.form['email']
+    email_query = "SELECT email from users where email= :email"
+    email_data = {
         'email': request.form['email'],
         'password': request.form['password']
     }
-    email_check = mysql.query_db(query, data)
-    print email_check
-    first_name_query = "SELECT first_name from users where email= :email"
-    data2 = {
-        'email': request.form['email']
-    }
-    mysql.query_db(first_name_query, data2)
-    session['first_name'] = mysql.query_db(first_name_query, data2)
+    email_check = mysql.query_db(email_query, email_data)
+
+    user_login_query = "SELECT id, email, password , first_name from users where email= :email"
+    login_data = {'email' :email}
+    
+
+    user_data_check = mysql.query_db(user_login_query, login_data)[0]
+    print user_data_check
+    session['user'] = user_data_check['id']
+    session['first_name'] = user_data_check['first_name']
     return redirect('/the_wall')
 
 @app.route('/register')
@@ -42,7 +45,7 @@ def register_process():
              'email': request.form['email'],
              'password': request.form['password']
            }
-    session['first_name'] = data['first_name']
+    session['user'] = data['first_name']
     mysql.query_db(query, data)
     return redirect('/the_wall')
 
