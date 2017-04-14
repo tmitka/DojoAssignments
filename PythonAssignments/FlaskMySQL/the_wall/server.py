@@ -54,4 +54,9 @@ def log_off():
     session.clear()
     return redirect('/')
 
+
+@app.route('/message_process', methods=["POST"])
+def message():
+    return redirect('/the_wall')
+
 app.run(debug=True)
