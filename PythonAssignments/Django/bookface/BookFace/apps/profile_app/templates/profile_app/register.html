@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="/profile/register_process" method="POST">
+        {% csrf_token %}
+        <label for="">email</label><br>
+        <input type="text" name="html_email"><br>
+        <label for="">password</label><br>
+        <input type="password" name="html_password"><br>
+        <label for="">confirm password</label><br>
+        <input type="password" name="html_confirm"><br><br>
+        <input type="submit" value="register"><br><br>
+        <a href="/profile/login">Sign into an existing user</a>
+        {% for m in messages %}
+        <p>{{m}}</p>
+        {% endfor %}
+    </form>
+</body>
+</html>
