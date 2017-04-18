@@ -10,8 +10,6 @@ def index(request):
     else:
         request.session['count'] = 0
 
-    if request.session['count'] == 0:
-            request.session['random_word'] = ""
         
 
     return render(request, 'random_apps/index.html')
