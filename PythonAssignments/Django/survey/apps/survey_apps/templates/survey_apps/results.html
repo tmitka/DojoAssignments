@@ -13,14 +13,14 @@
     <div id="form">
         <form action="/" method="POST">
             {% csrf_token %}
-            <label for="">Your Name: {{request.session.name}}</label><br><br>
-            <label for="">Dojo Location: {{request.session.location}}</label><br><br>
-            <label for="">Favorite Language: {{request.session.language}}</label><br><br>
-            <label for="">Comment (optional):</label><br><br>
+            <label>Your Name: {{request.session.name}}</label><br><br>
+            <label>Dojo Location: {{request.session.location}}</label><br><br>
+            <label>Favorite Language: {{request.session.language}}</label><br><br>
+            <label>Comment (optional):</label><br><br>
             <p>{{request.session.comment}}</p><br><br>
             <input type="submit" value="Go Back">
+        </form>
     </div>
 
-    </form>
 </body>
 </html>
