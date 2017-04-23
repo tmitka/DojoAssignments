@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Emails</title>
+</head>
+<body>
+        {% if messages %}
+          <div id="message_area">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+          </div>
+        {% endif %}
+      <div id="email_list">
+        <h1>Usernames Entered:</h1>
+        <table cellspacing=0 border=1 cellpadding=10>
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Date Added</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+        {% for email in all_emails %}
+          <tr>
+            <td>{{email.email}}</td>
+            <td>{{ email.created_at }}</td>
+            <td>
+              <form action="/emails/{{ email.id }}/delete" method="post">
+                {% csrf_token %}
+                <input class="delete" type="submit" value="DELETE">
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+          </tbody>
+        </table>
+        <form action="/">
+          <input id="back-button" type="submit" value="Back">
+        </form>
+      </div>
+    </div>
+</body>
+</html>
+

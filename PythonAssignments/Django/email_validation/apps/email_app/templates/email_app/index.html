@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email</title>
+</head>
+<body>
+    <h1>Please enter your email</h1>
+        {% if messages %}
+          <div id="message_area">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+          </div>         
+        {% endif %}
+      <form id="email_form" action="/email_process" method="post">
+        {% csrf_token %}
+        <label for="email">Email:</label>
+        <input type="text" name="email">
+        <br>
+        <br>
+        <input id="email_button" type="submit" value="Submit">
+      </form>
+</body>
+</html>
