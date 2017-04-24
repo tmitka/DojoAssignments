@@ -25,18 +25,21 @@ def register_process(request):
         failed_validation = False
 
         if len(first_name) < 2:
-            messages.error(request, "First name must be at least 2 characters!")
+            messages.error(request, "First name must be at least 2 characters")
             failed_validation = True
+
         elif not NAME_REGEX.match(first_name):
-            messages.error(request, "First name can only contain letters!")
+            messages.error(request, "First name can only contain letters")
             failed_validation = True
 
         if len(last_name) < 2:
-            messages.error(request, "Last name must be at least 2 characters!")
+            messages.error(request, "Last name must be at least 2 characters")
             failed_validation = True
+
         elif not NAME_REGEX.match(last_name):
-            messages.error(request, "Last name can only contain letters!")
+            messages.error(request, "Last name can only contain letters")
             failed_validation = True
+
         try:
             found_user = User.objects.get(email=email)
         except:
@@ -45,9 +48,11 @@ def register_process(request):
         if len(email) < 1:
             messages.error(request, "Email is required")
             failed_validation = True
+
         elif not EMAIL_REGEX.match(email):
             messages.error(request, "Please enter a valid email!")
             failed_validation = True
+
         elif found_user:
             messages.error(request, "Email already exists")
             failed_validation = True
@@ -55,9 +60,11 @@ def register_process(request):
         if len(request.POST['password']) < 1:
             messages.error(request, "Password is required!")
             failed_validation = True
+
         elif len(request.POST['password']) < 8:
             messages.error(request, "Password must be at least 8 characters long.")
             failed_validation = True
+
         elif request.POST['confirm_password'] != request.POST['password']:
             messages.error(request, "Passwords must be the same")
             failed_validation = True
@@ -67,9 +74,7 @@ def register_process(request):
 
         User.objects.create(first_name=first_name, last_name=last_name, email=email, password=password)
 
-
         request.session['current_user'] = User.objects.get(email=email).id
-
 
         return redirect('/users')
 
@@ -81,6 +86,7 @@ def users(request):
             "user":User.objects.get(pk=request.session['current_user']),
             'messages':get_messages(request)
         }
+        
         return render(request, 'login_app/users.html', context)
 
     return render(request, 'login_app/users.html')
