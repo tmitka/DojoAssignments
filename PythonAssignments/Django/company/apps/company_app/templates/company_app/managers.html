@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    User Information:<br>
+    {{current_employee.first_name}} {{current_employee.last_name}}<br>
+    Select an employee to assign to {{current_employee.first_name}}
+   
+    <form action="{% url 'employee' id=current_employee.id %}" method="POST">
+        {% csrf_token %}
+         <select name="employee_id">
+        {% for employee in employees%}
+            <option value="{{employee.id}}">{{employee.first_name}} {{employee.last_name}}</option>
+        {% endfor %}
+    </select>
+        <input type="submit" name="add_employees" value='Add Employees'>
+    </form><br><br>
+    Employees that work for: {{current_employee.first_name}} {{current_employee.last_name}}<br>
+        {% for e in manager_employees %}
+            {{e.member.first_name}} {{e.member.last_name}}
+            <a href="{% url 'delete' employee_id=e.member_id manager_id=current_employee.id %}">Remove</a><br>
+        {% endfor %}
+</body>
+</html>

@@ -154,6 +154,7 @@ def add_process(request):
             messages.error(request, 'Title needed')
         
         author = ''
+        print author
         if request.POST['author'] != '':
             author = request.POST['author']
             print author
@@ -200,11 +201,15 @@ def new_book(request, id):
     if "current_user" in request.session.keys():
         book = Book.objects.get(pk=id)
         review_id = book.id
+    
         context = {
-            "user":User.objects.get(pk=request.session['current_user']),
+            "user":User.objects.all(),
             'book': book,
             'reviews':Review.objects.filter(book_id=id).order_by('-created_at')[:3]
         }
+        
+
+    
     return render(request, 'book_app/new.html', context)
 
 def review_process(request, id):
@@ -241,4 +246,4 @@ def users(request, id):
             'reviews':Review.objects.filter(book_id=id).order_by('-created_at')[:3]
         }
     return render(request, 'book_app/users.html', context)
-    pass
+    

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Please enter your employee Credentials:</h2>
+    <form action="/employee_process" method="POST">
+    {% csrf_token %}
+        <label for="">First Name:</label>
+        <input type="text" name="first_name" value=""><br><br>
+        <label for="">Last Name:</label>
+        <input type="text" name="last_name" value=""><br><br>
+        <input type="submit" value='Submit'><br><br>
+    </form>
+    Take me to employees:
+    <form action="/employees" method="POST">
+    {% csrf_token %}
+        <input type="submit" value='Employee'>
+    </form>
+</body>
+</html>
