@@ -9,12 +9,11 @@
 </head>
 
 <body>
-    {% csrf_token %}
-    <a href="/books">Home</a> {% csrf_token %}
+    <a href="/books">Home</a> 
     <a href="/logout">Logout</a><br><br> {{book.title}}
 
     <br> Author: {{book.author.name}}<br><br> {% for review in reviews %} Rating: {{review.rating}} stars<br>
-    <a href="/">{{user.name}}</a> says: {{review.review}}<br><br> {% endfor %}
+    <a href="{%url 'user' id=review.user_review.id %}">{{review.user_review.name}}</a> says: {{review.review}}<br><br> {% endfor %}
 
         {% if messages %}
         <div id="message_area">

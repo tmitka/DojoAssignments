@@ -7,6 +7,23 @@
     <title>Users</title>
 </head>
 <body>
-    Users
+    {% csrf_token %}
+    <a href="/books">Home</a>
+
+    {% csrf_token %}
+    <a href="/books/add">Add Book and Review</a>
+            
+    {% csrf_token %}
+    <a href="/logout">Logout</a><br><br>
+    User Alias:
+    {{user.alias}}<br>
+    Name: {{user.name}}<br>
+    Email: {{user.email}}<br>
+    Total Reviews:{{all_reviews_length}}<br><br>
+
+    Recent Reviews:<br>
+    {% for r in reviews %}
+    <a href="{%url 'book' id=r.book.id %}">{{r.book.title}}</a><br>
+    {% endfor %}
 </body>
 </html>

@@ -12,7 +12,6 @@ urlpatterns = [
     url(r'^books/(?P<id>\d+)$', views.new_book),
     url(r'^review_process/(?P<id>\d+)$', views.review_process, name ="add_review"),
     url(r'^user_process/(?P<id>\d+)$', views. user_process, name = 'user'),
-    url(r'^users/(?P<id>\d+)$', views.users)
-
-
+    url(r'^users/(?P<id>\d+)$', views.users),
+    url(r'^books/(?P<id>\d+)$', views.books, name="book")
 ]

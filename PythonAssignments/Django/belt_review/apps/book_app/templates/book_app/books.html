@@ -22,14 +22,16 @@
             {% for review in reviews %}
             {{review.book.title}}<br> 
             Rating: {{review.rating}} stars<br>
-            <a href="{%url 'user' id=user.id %}">{{user.name}}</a> says: {{review.review}}<br><br> 
+            <a href="{%url 'user' id=review.user_review.id %}">{{review.user_review.name}}</a> says: {{review.review}}<br><br> 
             {% endfor %}
         </div>
         <div id="other_books">
             Other books with Reviews:
+            
             <select name="other_books">
+                <option selected="selected" disabled>Select from existing books</option>
                 {% for book in books %}
-                    <option value="{{book.id}}">{{book.title}}</option>
+                    <a href="/"><option value="{{book.id}}">{{book.title}}</option></a>
                 {% endfor %}
             </select>
     </div>

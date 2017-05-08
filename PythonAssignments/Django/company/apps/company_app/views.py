@@ -11,7 +11,7 @@ def employees_process(request):
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
         Employee.objects.create(first_name=first_name, last_name=last_name)
-        return redirect('/employee')
+        return redirect('/employees')
     return redirect('/')
 
 def employee(request):

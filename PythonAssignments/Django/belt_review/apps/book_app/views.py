@@ -155,7 +155,7 @@ def add_process(request):
         
         author = ''
         print author
-        if request.POST['author'] != '':
+        if 'author' in request.POST:
             author = request.POST['author']
             print author
         
@@ -174,7 +174,7 @@ def add_process(request):
         if not author:
             review_validaton = False
             messages.error(request, "Author cannot be left blank")
-
+            return redirect('/books/add')
 
         review = request.POST['review']
         print review
@@ -198,18 +198,15 @@ def add_process(request):
         return redirect('/books/' + str(book_id))
     
 def new_book(request, id):
-    if "current_user" in request.session.keys():
-        book = Book.objects.get(pk=id)
-        review_id = book.id
-    
-        context = {
-            "user":User.objects.all(),
-            'book': book,
-            'reviews':Review.objects.filter(book_id=id).order_by('-created_at')[:3]
-        }
-        
+    user = User.objects.all()
+    book = Book.objects.get(id=id)
 
-    
+    context = {
+        "user":user,
+        'book': book,
+        'reviews':Review.objects.filter(book_id=id).order_by('-created_at')[:3]
+    }
+        
     return render(request, 'book_app/new.html', context)
 
 def review_process(request, id):
@@ -238,12 +235,15 @@ def user_process(request, id):
     return redirect('/users/' + str(id))
 
 def users(request, id):
-    if "current_user" in request.session.keys():
-        book = Book.objects.get(pk=id)
-        context = {
-            "user":User.objects.get(pk=request.session['current_user']),
-            'book': book,
-            'reviews':Review.objects.filter(book_id=id).order_by('-created_at')[:3]
-        }
+    user = User.objects.get(id=id)
+    book = Book.objects.get(id=id)
+    all_reviews = Review.objects.filter(user_review_id=user)
+    context = {
+        "user":user,
+        'reviews':Review.objects.filter(user_review_id=user).order_by('-created_at')[:3],
+        'all_reviews':all_reviews,
+        'book':book
+    }
+    context['all_reviews_length'] = len(context['all_reviews'])
     return render(request, 'book_app/users.html', context)
     
