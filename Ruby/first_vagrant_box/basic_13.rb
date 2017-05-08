@@ -77,11 +77,18 @@
 #puts hash
 
 #12 Shifting the Values in the Array
-x = [1, 5, 10, 7, -2]
-print x
-for i in x
-    x.insert(-1, 2)
-end
+#x = [1, 5, 10, 7, -2]
+#x.each {|number| 
+#    x.shift
+#    print x 
+#    x.insert(-1, number)
+#    print x
+#}
+#print x
+#x.shift
+#x.insert(-1, 1)
+#print x
+
 #13 Number to String
 #x = [-1, -3, 2]
 
