@@ -6,7 +6,7 @@ class TasksController < ApplicationController
     else
       redirect_to '/login/index'
     end
-  end
+    end
 
 
   def add
