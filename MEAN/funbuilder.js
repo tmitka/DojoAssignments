@@ -20,7 +20,7 @@ function stringReturnTwo(string2){
 
 function caller(parameter){
     if (typeof parameter === 'function'){
-        (parameter)
+        parameter()
     }
 }
 
