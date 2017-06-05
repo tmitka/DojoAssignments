@@ -1,0 +1,20 @@
+<% if current_user %>
+    <a href="/songs">Dashboard</a>
+    <a href="/users/logout">Logout</a>
+<% end %>
+<br><br>
+<p>Others who added <%= @song.artist %> - <%= @song.title %>:</p>
+<br><br>
+<table border="1", width="500", cellpadding="10">
+    <tr>
+        <th>Name</th>
+        <th>Times Added</th>
+    </tr>
+    <% @song.playlist_users.each do |user| %>
+    <tr>
+        <td><a href="/user/<%= user.id%>"><%= user.first_name %></td></a>
+    </tr>
+    <% end %>
+
+</table>
+

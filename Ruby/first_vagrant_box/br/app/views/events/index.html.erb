@@ -1,0 +1,152 @@
+
+<a href="/users/<%= current_user.id %>">Edit My Profile</a>
+<h1>Welcome, <%= current_user.first_name %>!</h1>
+<p>Here are some of the events at your state:</p>
+<table border="1", width="500", cellpadding="10">
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Location</th>
+    <th>Host</th>
+    <th>Action/Status</th>
+  </tr>
+  <% @state_events.each do |s|%>
+  <tr>
+      <td><a href="/events/<%= s.id %>"><%= s.name %></a></td>
+      <td><%= s.date %></td>
+      <td><%= s.location %></td>
+      <td><%= s.user.first_name %></td>
+      <td>
+        <% if s.user == current_user %>
+          <form action="/events/<%= s.id %>" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" name="" value="Delete">
+          </form>
+        <% else %>
+          <% if s.attending_users.include?(current_user) %>
+            <table>
+              <tr>
+                <td>Joining</td>
+                <td>
+                  <form action="/events/<%= s.id %>/leave" method="post">
+                    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                    <input type="submit" name="" value="Cancel">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          <% else %>
+            <form action="/events/<%= s.id %>" method="post">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+              <input type="submit" name="" value="Join">
+            </form>
+          <% end %>
+        <% end %>
+
+      </td>
+  </tr>
+  <% end %>
+</table>
+
+<p>Here are some of the events in other states:</p>
+<table border="1", width="500">
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Location</th>
+    <th>State</th>
+    <th>Host</th>
+    <th>Action/Status</th>
+  </tr>
+  <% @not_state_events.each do |s|%>
+  <tr>
+      <td><a href="/events/<%= s.id %>"><%= s.name %></a></td>
+      <td><%= s.date %></td>
+      <td><%= s.location %></td>
+      <td><%= s.state %></td>
+      <td><%= s.user.first_name %></td>
+      <td>
+        <% if s.attending_users.include?(current_user) %>
+          <table>
+            <tr>
+              <td>Joining</td>
+              <td>
+                <form action="/events/<%= s.id %>/leave" method="post">
+                  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                  <input type="submit" name="" value="Cancel">
+                </form>
+              </td>
+            </tr>
+          </table>
+        <% else %>
+          <form action="/events/<%= s.id %>" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="submit" name="" value="Join">
+          </form>
+        <% end %>
+      </td>
+  </tr>
+  <% end %>
+</table>
+<br><br>
+<form action="/events" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    Name: <input type="text" name="event[name]" value=""><br><br>
+    Date:<input type="date" name="event[date]" value=""><br><br>
+    Location:<input type="text" name="event[location]" value=""><br><br>
+    State:<select class="" name="event[state]">
+	<option value="AL">AL</option>
+	<option value="AK">AK</option>
+	<option value="AZ">AZ</option>
+	<option value="AR">AR</option>
+	<option value="CA">CA</option>
+	<option value="CO">CO</option>
+	<option value="CT">CT</option>
+	<option value="DE">DE</option>
+	<option value="DC">DC</option>
+	<option value="FL">FL</option>
+	<option value="GA">GA</option>
+	<option value="HI">HI</option>
+	<option value="ID">ID</option>
+	<option value="IL">IL</option>
+	<option value="IN">IN</option>
+	<option value="IA">IA</option>
+	<option value="KS">KS</option>
+	<option value="KY">KY</option>
+	<option value="LA">LA</option>
+	<option value="ME">ME</option>
+	<option value="MD">MD</option>
+	<option value="MA">MA</option>
+	<option value="MI">MI</option>
+	<option value="MN">MN</option>
+	<option value="MS">MS</option>
+	<option value="MO">MO</option>
+	<option value="MT">MT</option>
+	<option value="NE">NE</option>
+	<option value="NV">NV</option>
+	<option value="NH">NH</option>
+	<option value="NJ">NJ</option>
+	<option value="NM">NM</option>
+	<option value="NY">NY</option>
+	<option value="NC">NC</option>
+	<option value="ND">ND</option>
+	<option value="OH">OH</option>
+	<option value="OK">OK</option>
+	<option value="OR">OR</option>
+	<option value="PA">PA</option>
+	<option value="RI">RI</option>
+	<option value="SC">SC</option>
+	<option value="SD">SD</option>
+	<option value="TN">TN</option>
+	<option value="TX">TX</option>
+	<option value="UT">UT</option>
+	<option value="VT">VT</option>
+	<option value="VA">VA</option>
+	<option value="WA">WA</option>
+	<option value="WV">WV</option>
+	<option value="WI">WI</option>
+	<option value="WY">WY</option>
+    </select><br><br>
+    <input type="submit" name="" value="Add Event">
+</form>
