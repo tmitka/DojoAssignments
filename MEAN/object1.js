@@ -23,11 +23,7 @@ function VehicleConstructor(name, wheels, passengers, speed){
 
 var bike =  new VehicleConstructor("Bike", 2, 1, 15)
 
-bike.name
-bike.move
-bike.Traveled()
-bike.Traveled()
-console.log(bike.miles)
+
 //console.log(bike.wheels)
 //console.log(bike.passengers)
 //bike.makeNoise("Ring Ring")
