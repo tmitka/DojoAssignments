@@ -4,44 +4,17 @@ var mongoose = require("mongoose");
 var path = require("path");
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded());
-app.set("views", path.join(__dirname, "./views"));
-app.set("view engine", "ejs");
-app.get("/", function(req, res){
-	Message.find({}, false, true).populate('_comments').exec(function(err, messages){
-	      res.render('index.ejs', {messages: messages});
-	});
-});
-app.post("/message", function(req, res){
-	var newMessage = new Message({name: req.body.name, message: req.body.message});
-	newMessage.save(function(err){
-		if(err){
-			console.log(err);
-			res.render('index.ejs', {errors: newMessage.errors});
-		} else {
-			console.log("success");
-			res.redirect('/');
-		}
-	})
-})
-app.post("/comment/:id", function(req, res){
-	var message_id = req.params.id;
-	Message.findOne({_id: message_id}, function(err, message){
-		var newComment = new Comment({name: req.body.name, text: req.body.comment});
-		newComment._message = message._id;
-		Message.update({_id: message._id}, {$push: {"_comments": newComment}}, function(err){
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '/client/static')));
+app.use(express.static(path.join(__dirname, '/bower_components')));
 
-		});
-		newComment.save(function(err){
-			if(err){
-				console.log(err);
-				res.render('index.ejs', {errors: newComment.errors});
-			} else {
-				console.log("comment added");
-				res.redirect("/");
-			}
-		});
-	});
-});
+require('./server/config/mongoose.js');
+require('./server/config/routes.js')(app);
+
+
+
+app.set("view engine", "ejs");
+
 app.listen(8000, function(){
 	console.log("server running on port 8000");
 });
