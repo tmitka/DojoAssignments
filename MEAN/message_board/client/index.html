@@ -1,20 +1,22 @@
-<html ng-app = "myApp">
+<!DOCTYPE html>
+<html lang="en" ng-app='message_board'>
 <head>
-	<title>Message Board</title>
-	<script src="angular/angular.js" charset="utf-8"></script>
-	<script src="angular-route/angular-route.js" charset="utf-8"></script>
-	<script src="app.js" charset="utf-8"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Message board</title>
+    <script src='angular/angular.js'></script>
+    <script src='angular-route/angular-route.js'></script>
+    <script src='assets/app.js'></script>
+    <script src='controllers/postsController.js'></script>
+    <script src='factories/postsFactory.js'></script>
+    
+    <link rel="stylesheet" href="assets/styles.css">
 
-    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-	<div id="top">
-		<h1>The Dojo Message Board</h1>
-	</div>
-	<div ng-view = "">
-
-	</div>
+    hello world
+    <div ng-controller="postsController">
+    </div>
 </body>
 </html>
-

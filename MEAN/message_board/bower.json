@@ -1,9 +1,9 @@
 {
   "name": "message_board",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "authors": [
-    "Lyubima Toshkova <lyubimatoshkova18@gmail.com>"
+    "Kamil Wowczuk <kamilwowczuk@gmail.com>"
   ],
   "license": "ISC",
   "homepage": "",
@@ -13,10 +13,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "angular": "^1.6.4",
-    "angular-route": "^1.6.4",
-    "body-parser": "^1.17.2"
-  }
+  ]
 }
