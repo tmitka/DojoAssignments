@@ -61,6 +61,9 @@ namespace rpg_classes{
             if (enemy.health < 50){
                 enemy.health = 0;
             }
+            else {
+                Console.WriteLine("Death Blow Failed");
+            }
         }
         public void meditate(){
             health = 200;

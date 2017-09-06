@@ -1,0 +1,10 @@
+C:\Users\Ted\desktop\codingdojo\dojoassignments\C#\rpg_classes\bin\Debug\netcoreapp2.0\rpg_classes.deps.json
+C:\Users\Ted\desktop\codingdojo\dojoassignments\C#\rpg_classes\bin\Debug\netcoreapp2.0\rpg_classes.runtimeconfig.json
+C:\Users\Ted\desktop\codingdojo\dojoassignments\C#\rpg_classes\bin\Debug\netcoreapp2.0\rpg_classes.runtimeconfig.dev.json
+C:\Users\Ted\desktop\codingdojo\dojoassignments\C#\rpg_classes\bin\Debug\netcoreapp2.0\rpg_classes.dll
+C:\Users\Ted\desktop\codingdojo\dojoassignments\C#\rpg_classes\bin\Debug\netcoreapp2.0\rpg_classes.pdb
+C:\Users\Ted\desktop\codingdojo\dojoassignments\C#\rpg_classes\obj\Debug\netcoreapp2.0\rpg_classes.csproj.CoreCompileInputs.cache
+C:\Users\Ted\desktop\codingdojo\dojoassignments\C#\rpg_classes\obj\Debug\netcoreapp2.0\rpg_classes.AssemblyInfoInputs.cache
+C:\Users\Ted\desktop\codingdojo\dojoassignments\C#\rpg_classes\obj\Debug\netcoreapp2.0\rpg_classes.AssemblyInfo.cs
+C:\Users\Ted\desktop\codingdojo\dojoassignments\C#\rpg_classes\obj\Debug\netcoreapp2.0\rpg_classes.dll
+C:\Users\Ted\desktop\codingdojo\dojoassignments\C#\rpg_classes\obj\Debug\netcoreapp2.0\rpg_classes.pdb
