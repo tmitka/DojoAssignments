@@ -38,5 +38,9 @@ namespace vehicle{
         return (int)Distance;
     }
 }
+    public class Car : Vehicle
+{
+
+    public Car() : base(5){}
 
 }
