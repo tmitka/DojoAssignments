@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
  
 namespace calling_card.Controllers
 {
-    public class CardsController : Controller
+    public class card : Controller
     {
 
         [HttpGet]
@@ -13,6 +13,13 @@ namespace calling_card.Controllers
             //This builds a JSON response with the given route parameters
             return Json(new {FirstName = FirstName, LastName = LastName, Age = Age, FavoriteColor = FavColor});
         }
+            [HttpGet]
+        [Route("")]
+        public IActionResult Index()
+        {
+            return View();
+        }
+        
     }
 }
 
