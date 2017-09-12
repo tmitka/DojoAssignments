@@ -1,0 +1,10 @@
+C:\Users\Ted\desktop\codingdojo\dojoassignments\c#\survey\bin\Debug\netcoreapp2.0\survey.deps.json
+C:\Users\Ted\desktop\codingdojo\dojoassignments\c#\survey\bin\Debug\netcoreapp2.0\survey.runtimeconfig.json
+C:\Users\Ted\desktop\codingdojo\dojoassignments\c#\survey\bin\Debug\netcoreapp2.0\survey.runtimeconfig.dev.json
+C:\Users\Ted\desktop\codingdojo\dojoassignments\c#\survey\bin\Debug\netcoreapp2.0\survey.dll
+C:\Users\Ted\desktop\codingdojo\dojoassignments\c#\survey\bin\Debug\netcoreapp2.0\survey.pdb
+C:\Users\Ted\desktop\codingdojo\dojoassignments\c#\survey\obj\Debug\netcoreapp2.0\survey.csproj.CoreCompileInputs.cache
+C:\Users\Ted\desktop\codingdojo\dojoassignments\c#\survey\obj\Debug\netcoreapp2.0\survey.AssemblyInfoInputs.cache
+C:\Users\Ted\desktop\codingdojo\dojoassignments\c#\survey\obj\Debug\netcoreapp2.0\survey.AssemblyInfo.cs
+C:\Users\Ted\desktop\codingdojo\dojoassignments\c#\survey\obj\Debug\netcoreapp2.0\survey.dll
+C:\Users\Ted\desktop\codingdojo\dojoassignments\c#\survey\obj\Debug\netcoreapp2.0\survey.pdb
