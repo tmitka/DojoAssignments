@@ -21,17 +21,17 @@ namespace DojoSurvey.Controllers
 
             if(Name == null)
             {
-                ViewBag.Errors.Add("Name cannot be empty");
+                ViewBag.Errors.Add("Name can't be empty");
             }
 
             if(Location == null)
             {
-                ViewBag.Errors.Add("Please select  a valid location");
+                ViewBag.Errors.Add("Please enter a location");
             }
 
             if(Language == null)
             {
-                ViewBag.Errors.Add("Please select a valid language");
+                ViewBag.Errors.Add("Please enter a language");
             }
 
             if(Comment == null)

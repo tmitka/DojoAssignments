@@ -3,20 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>Dojo Survey</title>
-        <link rel="stylesheet" type="text/css" href="~/css/style.css">
     </head>
     <body>
-        <div class="box-div">
+        <div class="main_div">
             @foreach(var error in ViewBag.Errors)
             {
-                <p class="red">@error</p>
+                <p>@error</p>
             }
             <form action="/process" method="post">
-                <div class="element-group">
+                <div class="content">
                     <label for="Name">Your Name:</label>
                     <input type="text" name="Name"/>
                 </div>
-                <div class="element-group">
+                <div class="content">
                     <label for="Location">Dojo Location:</label>
                     <select name="Location">
                         <option value="Chicago">Chicago</option>
@@ -25,7 +24,7 @@
                         <option value="Washington DC">Washington DC</option>
                     </select>
                 </div>
-                <div class="element-group">
+                <div class="content">
                     <label for="Language">Favorite Language:</label>
                     <select name="Language">
                         <option value="Python">Python</option>
@@ -34,7 +33,7 @@
                         <option value="Ruby">Ruby</option>
                     </select>
                 </div>
-                <div class="element-group">
+                <div class="content">
                     <label for="Comment">Comment (Optional):</label>
                     <textarea name="Comment">
                     </textarea>
