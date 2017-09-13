@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DojoSurvey.Controllers
+namespace survey.Controllers
 {
     public class SurveyController : Controller
     {
